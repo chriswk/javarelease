@@ -20,7 +20,7 @@ jobs:
         with:
           java-version: "11"
           distribution: "temurin"
-          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
           cache: maven
       - name: Setup git config
