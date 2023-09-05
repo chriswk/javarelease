@@ -1,0 +1,33 @@
+name: Release to github
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: What version would you like to use?
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout code
+      - name: Setup Java and Maven Central Repo
+        uses: actions/setup-java@v3
+        with:
+          java-version: "11"
+          distribution: "temurin"
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
+          cache: maven
+      - name: Setup git config
+        run: |
+          git config user.name "Github Release Bot"
+          git config user.email "<>"
+      - name: Release
+        run: mvn -B -DreleaseVersion=${{ inputs.version}} release:prepare release:perform
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
