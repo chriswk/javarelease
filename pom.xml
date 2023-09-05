@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.chriswk</groupId>
     <artifactId>javareleaser</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <name>Java Releaser</name>
     <description>A tester for github workflow releasing</description>
     <url>https://github.com/chriswk/javarelease</url>
@@ -22,7 +22,7 @@
         <url>https://github.com/chriswk/javarelease</url>
         <connection>scm:git:https://github.com/chriswk/javarelease.git</connection>
         <developerConnection>scm:git:https://github.com/chriswk/javarelease.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>javareleaser-1.0.2</tag>
   </scm>
     <repositories>
         <repository>
