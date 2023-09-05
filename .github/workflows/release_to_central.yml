@@ -31,3 +31,4 @@ jobs:
         run: mvn -B -DreleaseVersion=${{ inputs.version}} release:prepare release:perform
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
