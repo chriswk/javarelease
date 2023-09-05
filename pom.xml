@@ -21,8 +21,8 @@
     </licenses>
     <scm>
         <url>https://github.com/chriswk/javarelease</url>
-        <connection>scm:git:git@github.com:chriswk/javarelease.git</connection>
-        <developerConnection>scm:git:git@github.com:chriswk/javarelease.git</developerConnection>
+        <connection>scm:git:https://github.com/chriswk/javarelease.git</connection>
+        <developerConnection>scm:git:https://github.com/chriswk/javarelease.git</developerConnection>
     </scm>
     <repositories>
         <repository>
